@@ -16,11 +16,5 @@ class SessionsController < ApplicationController
         session.delete :user_id
         head :no_content
     end
-
-    private
-
     
 end
-
-# why wont session hash persist byond the create method????!!!!
-

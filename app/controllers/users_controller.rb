@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-    # before_action :authorize, only: [:show]
     
         # "/signup" if no "/me" present show login/signup component
         def create
             user = User.create(user_params)
+            # byebug
             if user.valid?
                 session[:user_id] = user.id 
                 render json: user, status: :created
@@ -21,17 +21,13 @@ class UsersController < ApplicationController
         def show
             user = User.find_by(id: session[:user_id])
             if user
-                render json: user
+                render json: user, include: :locations
             else
                 render json: { error: "Not Authorized" }, status: :unauthorized
             end
         end
     
         private 
-
-        # def authorize
-            # see if userid is present 
-        # end
     
         def user_params
             params.permit(:email, :password)
