@@ -1,8 +1,4 @@
 class LocationsController < ApplicationController
-    # a component will  iterate over savedLocations array and display a 
-    # a location show component, each show will fetch with location props 
-    # save location lat/long and associate to session_id/user_id
-    # user_id = session[:user_id]
 
     # "/save"
     def create
@@ -14,6 +10,14 @@ class LocationsController < ApplicationController
         else
             render json: { error: "Must Log In" }, status: :unauthorized
         end
+    end
+
+    # "/delete"
+    def destroy
+        # byebug
+        location = Location.find(params[:id])
+        location.delete
+        head :no_content
     end
 
     def index
