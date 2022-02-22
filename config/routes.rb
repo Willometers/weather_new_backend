@@ -10,12 +10,12 @@ Rails.application.routes.draw do
 
   get "/me", to: "users#show"
   post "/signup", to: "users#create"
+  get "/allusers", to: "users#index"
 
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
   post "/savereview", to: "reviews#create"
   get "/allreviews", to: "reviews#index"
-  
 
 end

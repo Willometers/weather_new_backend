@@ -1,7 +1,7 @@
 class SkiareasController < ApplicationController
 
     def index 
-        render json: SkiArea.all
+        render json: SkiArea.all, include: :reviews
     end
 
     def show
