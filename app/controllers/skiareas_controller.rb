@@ -9,3 +9,4 @@ class SkiareasController < ApplicationController
     end
 
 end
+
