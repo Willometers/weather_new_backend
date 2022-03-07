@@ -7,4 +7,4 @@ class User < ApplicationRecord
     validates_uniqueness_of :email
 end
 
-# has maney Locations through reviews
+# has_many :locations through: :saves
