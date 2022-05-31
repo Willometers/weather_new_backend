@@ -2,8 +2,8 @@ class ReviewsController < ApplicationController
 
     def create
         # byebug
-        review = Review.create(review_params)
-        render json: review
+        post = Review.create(review_params)
+        render json: post
     end
 
     def index 

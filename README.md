@@ -1,5 +1,23 @@
 # README
 
+# SkiNY App
+
+## Table of Contents
+
+* [General Info](#general-info)
+* [Technologies](#technologies)
+* [Launch](#launch)
+* [Setup](#setup)
+
+
+## General Info
+
+## Technologies
+
+## Launch
+
+## Setup
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

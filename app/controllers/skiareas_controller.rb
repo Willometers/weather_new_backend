@@ -5,7 +5,7 @@ class SkiareasController < ApplicationController
     end
 
     def show
-        render json: SkiArea.find(params[:id])
+        render json: SkiArea.find(params[:id]), include: :reviews
     end
 
 end
