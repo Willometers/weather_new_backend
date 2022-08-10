@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    
         # "/signup" if no "/me" present show login/signup component
         def create
             user = User.create(user_params)
